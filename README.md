@@ -16,21 +16,26 @@ Clone this repo from GitHub and open the directory, on a UNIX machine these acti
 
 We recommend you to install all the required dependencies in a virtual environment such as [virtualenv](https://virtualenv.pypa.io/en/stable/), however this step could be skipped.
 
-    virtualenv -p python3 venv
-    source venv/bin/activate
+    virtualenv -p python3 spacy-tut
+    source spacy-tut/bin/activate
 
 If you are using the Miniconda release of Python, you can use [conda virtual environments](http://conda.pydata.org/docs/using/envs.html) so your virtual environment setup will be slightly different. 
 
-	conda create --name venv python=3
-	source activate venv
+	conda create --name spacy-tut python=3
+	source activate spacy-tut
 
 To install all the required Python dependencies needed in this tutorial, you need to run this command in the cloned directory:
 
     pip install -r requirements.txt
 
+Or, using the conda package manager.
+
+    conda install --file requirements.txt
+
+
 To install the spaCy model you need to run:
 
-    sputnik --name spacy --repository-url http://index.spacy.io install en==1.1.0
+    python -m spacy download en_core_web_md
 
 To run jupyter notebook run:
 
